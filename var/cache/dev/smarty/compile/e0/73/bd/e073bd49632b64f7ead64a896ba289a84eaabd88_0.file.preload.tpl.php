@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-25 17:19:19
+/* Smarty version 4.3.1, created on 2023-06-25 23:37:55
   from 'C:\xampp\htdocs\prestashop\adminMt\themes\new-theme\public\preload.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64985af7cb1186_49619636',
+  'unifunc' => 'content_6498b3b383bf23_40338347',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64985af7cb1186_49619636 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6498b3b383bf23_40338347 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link
       rel="preload"
       href="<?php echo $_smarty_tpl->tpl_vars['admin_dir']->value;?>

@@ -1,5 +1,7 @@
 <?php
 
+/*BLOCS DE TEXTE CONFIGURABLES EN MODE NON CONNECTE OU EN MODE CONNECTE*/
+
 // Mesure de sécurité
 if (!defined('_PS_VERSION_')) {
 	exit;
@@ -25,7 +27,7 @@ class MyModule extends Module
 		$this->confirmUninstall = $this->trans('Voulez-vous vraiment désinstaller ?');
 
 		if (!Configuration::get('MYMODULE_NAME')) {
-			$this->warning = $this->trans('No name provided');
+			$this->warning = $this->trans('Aucun nom fourni');
 		};
 	}
 
@@ -41,13 +43,13 @@ class MyModule extends Module
 			'MYMODULE_TEXT_GUEST' => '',
 			'MYMODULE_TEXT_LOGGED' => '',
 		);
-
+		// Màj de la configuration avec les valeurs de $defaultvalues si elles n'existent pas déjà
 		foreach ($defaultValues as $key => $value) {
 			if (!Configuration::hasKey($key)) {
 				Configuration::updateValue($key, $value);
 			}
 		}
-
+		// Enregistrement des hooks utilisés dans le module
 		return (parent::install()
 			&& $this->registerHook('displayHome')
 			// && $this->registerHook('displayHeader')
@@ -62,33 +64,33 @@ class MyModule extends Module
 			&& Configuration::deleteByName('MYMODULE_NAME'));
 	}
 
-	// Paramétrage de la page de configuration du module
+	// Paramétrage de la page de configuration des blocs de texte
 	public function getContent()
-{
-    $output = '';
+	{
+		$output = '';
 
-    // Check if the form has been submitted
-    if (Tools::isSubmit('submit' . $this->name)) {
-        // Retrieve the values entered by the user
-        $textGuest = Tools::getValue('MYMODULE_TEXT_GUEST');
-        $textLogged = Tools::getValue('MYMODULE_TEXT_LOGGED');
+		// Vérifie que le formulaire a été soumis
+		if (Tools::isSubmit('submit' . $this->name)) {
+			// Récupère les valeurs entrées par l'utilisateur
+			$textGuest = Tools::getValue('MYMODULE_TEXT_GUEST');
+			$textLogged = Tools::getValue('MYMODULE_TEXT_LOGGED');
 
-        // Validate the configuration
-        if (empty($textGuest) || empty($textLogged) || !Validate::isGenericName($textGuest) || !Validate::isGenericName($textLogged)) {
-            // Error in case of invalid values
-            $output .= $this->displayError($this->l('Invalid configuration value'));
-        } else {
-            // Values are valid, save them and display a success message
-            Configuration::updateValue('MYMODULE_TEXT_GUEST', $textGuest);
-            Configuration::updateValue('MYMODULE_TEXT_LOGGED', $textLogged);
-            $output .= $this->displayConfirmation($this->l('Settings updated'));
-        }
-    }
+			// Valide la configuration
+			if (empty($textGuest) || empty($textLogged) || !Validate::isGenericName($textGuest) || !Validate::isGenericName($textLogged)) {
+				// Erreur en cas de valeur invalide
+				$output .= $this->displayError($this->l('Valeur de configuration invalide'));
+			} else {
+				// Les valeurs sont valides, enregistrement et affichage d'un message de confirmation
+				Configuration::updateValue('MYMODULE_TEXT_GUEST', $textGuest);
+				Configuration::updateValue('MYMODULE_TEXT_LOGGED', $textLogged);
+				$output .= $this->displayConfirmation($this->l('Paramètres mis à jour'));
+			}
+		}
 
-    $output .= $this->getConfigForm();
+		$output .= $this->getConfigForm();
 
-    return $output;
-}
+		return $output;
+	}
 
 
 
@@ -124,7 +126,7 @@ class MyModule extends Module
 			),
 		);
 
-		// utilisation de la classe HelperForm pour créer et gérer nos formulaires de blocs de texte
+		// Utilisation de la classe HelperForm pour créer et gérer nos formulaires de blocs de texte
 		$helper = new HelperForm();
 		$helper->module = $this;
 		$helper->name_controller = $this->name;
@@ -136,7 +138,7 @@ class MyModule extends Module
 		$helper->title = $this->displayName;
 		$helper->show_toolbar = true;
 		$helper->toolbar_scroll = true;
-		$helper->submit_action = 'submit_' . $this->name;
+		$helper->submit_action = 'submit' . $this->name;
 		$helper->toolbar_btn = array(
 			'save' => array(
 				'desc' => $this->l('Save'),
@@ -155,6 +157,7 @@ class MyModule extends Module
 		return $helper->generateForm(array($fieldsForm));
 	}
 
+	//Greffe du module au hook de la page d'accueil
 	public function hookDisplayHome($params)
 	{
 		$textGuest = Configuration::get('MYMODULE_TEXT_GUEST');
@@ -165,6 +168,7 @@ class MyModule extends Module
 
 		$text = '';
 
+		// Affichage selon le mode (connecté ou non)
 		if ($userIsLogged) {
 			$text = $textLogged;
 		} else {
@@ -174,14 +178,15 @@ class MyModule extends Module
 		$this->context->smarty->assign(array(
 			'mymodule_text' => $text
 		));
-
+		//Lien entre le module et le template qui s'affiche sur la page d'accueil
 		return $this->display(__FILE__, 'views/templates/front/mymodule_home.tpl');
 	}
 
+	//Greffe de notre page de style au hook en charge du style sur le front
 	public function hookHookActionFrontControllerSetMedia($params)
 	{
 		$this->context->controller->registerStylesheet(
-			'mymodule-style',
+			'mymodule_home',
 			'modules/' . $this->name . '/views/css/mymodule_home.css',
 			[
 				'media' => 'all',

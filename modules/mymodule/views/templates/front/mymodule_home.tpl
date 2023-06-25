@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>My Module Template</title>
+    <link rel="stylesheet" href="../css/mymodule_home.css" type="text/css" media="all" />
    
 </head>
 
 <body>
 
-
-<pre>{$mymodule_text|var_dump}</pre>
 {if isset($errors) && $errors}
     <div class="alert alert-danger">
         {foreach $errors as $error}
