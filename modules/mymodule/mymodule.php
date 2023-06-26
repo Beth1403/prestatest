@@ -1,6 +1,8 @@
 <?php
+require_once(dirname(__FILE__) . '/controllers/front/frontbannercontroller.php');
 
 /*BLOCS DE TEXTE CONFIGURABLES EN MODE NON CONNECTE OU EN MODE CONNECTE*/
+
 
 // Mesure de sécurité
 if (!defined('_PS_VERSION_')) {
@@ -52,8 +54,8 @@ class MyModule extends Module
 		// Enregistrement des hooks utilisés dans le module
 		return (parent::install()
 			&& $this->registerHook('displayHome')
-			// && $this->registerHook('displayHeader')
-			&& $this->registerHook('hookActionFrontControllerSetMedia')
+			&& $this->registerHook('displayHeader')
+			&& $this->registerHook('actionFrontControllerSetMedia')
 		);
 	}
 
@@ -182,16 +184,44 @@ class MyModule extends Module
 		return $this->display(__FILE__, 'views/templates/front/mymodule_home.tpl');
 	}
 
+
 	//Greffe de notre page de style au hook en charge du style sur le front
-	public function hookHookActionFrontControllerSetMedia($params)
+	public function hookActionFrontControllerSetMedia($params)
 	{
 		$this->context->controller->registerStylesheet(
-			'mymodule_home',
-			'modules/' . $this->name . '/views/css/mymodule_home.css',
+			'module-mymodule',
+			'modules/' . $this->name . '/views/css/mymodule.css',
 			[
 				'media' => 'all',
-				'priority' => 1000,
+				'priority' => 200,
 			]
 		);
 	}
+
+	// public function hookDisplayHeader($params)
+	// {
+	// 	$frontBannerController = new FrontBannerController();
+	// 	$adminFrontBannerData = $frontBannerController->getAdminFrontBannerData();
+	
+	// 	if ($adminFrontBannerData) {
+	// 		$this->context->smarty->assign('adminFrontBannerData', $adminFrontBannerData);
+	// 		return $this->display(__FILE__, 'views/templates/front/front_banner.tpl');
+	// 	}
+	// }
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

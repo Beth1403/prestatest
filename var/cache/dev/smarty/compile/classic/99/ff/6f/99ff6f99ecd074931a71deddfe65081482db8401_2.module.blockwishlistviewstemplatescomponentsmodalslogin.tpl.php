@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-25 23:38:07
+/* Smarty version 4.3.1, created on 2023-06-26 16:23:46
   from 'module:blockwishlistviewstemplatescomponentsmodalslogin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6498b3bf886885_36133232',
+  'unifunc' => 'content_64999f72223fc2_26003300',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6498b3bf886885_36133232 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64999f72223fc2_26003300 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin C:\xampp\htdocs\prestashop/modules/blockwishlist/views/templates/components/modals/login.tpl -->
 <div
   class="wishlist-login"

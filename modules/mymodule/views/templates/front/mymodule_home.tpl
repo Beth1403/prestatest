@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Module Template</title>
-    <link rel="stylesheet" href="../css/mymodule_home.css" type="text/css" media="all" />
+    <title>Prestatest</title>
+    <link rel="stylesheet" href="/mymodule/views/css/mymodule.css" />
    
 </head>
 
