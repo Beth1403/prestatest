@@ -7,9 +7,14 @@
 
 // Méthode pour récupérer le nombre total de produits actifs sur le site
 
-class FrontBannerController extends ModuleFrontController
+class mymodulefrontbannercontrollerModuleFrontController extends ModuleFrontController
 {
 
+    public function __construct()
+  {
+    parent::__construct();
+    
+  }
     // Méthode pour récupérer le prix moyen du panier
     public function getAverageCartPrice()
     {
@@ -106,28 +111,21 @@ class FrontBannerController extends ModuleFrontController
         }
 
         return null;
+        
     }
 
-//     public function initContent()
-// {
-//     parent::initContent();
-
-//     $adminFrontBannerData = $this->getAdminFrontBannerData();
-
-//     if ($adminFrontBannerData) {
-//         $this->context->smarty->assign('adminFrontBannerData', $adminFrontBannerData);
-//         $this->setTemplate('front_banner.tpl');
-//     }
-// }
-
-
-    public function hookDisplayHeader($params)
+    
+    public function hookDisplayTop($params)
     {
         $adminFrontBannerData = $this->getAdminFrontBannerData();
 
         if ($adminFrontBannerData) {
             $this->context->smarty->assign('adminFrontBannerData', $adminFrontBannerData);
-            return $this->display(__FILE__, 'views/templates/front/front_banner.tpl');
+            return $this->display(__FILE__, './views/templates/front/front_banner.tpl');
         }
     }
+
+   
+
+
 }

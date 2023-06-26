@@ -54,7 +54,7 @@ class MyModule extends Module
 		// Enregistrement des hooks utilisés dans le module
 		return (parent::install()
 			&& $this->registerHook('displayHome')
-			&& $this->registerHook('displayHeader')
+			&& $this->registerHook('displayTop')
 			&& $this->registerHook('actionFrontControllerSetMedia')
 		);
 	}
@@ -198,16 +198,7 @@ class MyModule extends Module
 		);
 	}
 
-	// public function hookDisplayHeader($params)
-	// {
-	// 	$frontBannerController = new FrontBannerController();
-	// 	$adminFrontBannerData = $frontBannerController->getAdminFrontBannerData();
 	
-	// 	if ($adminFrontBannerData) {
-	// 		$this->context->smarty->assign('adminFrontBannerData', $adminFrontBannerData);
-	// 		return $this->display(__FILE__, 'views/templates/front/front_banner.tpl');
-	// 	}
-	// }
 	
 
 
