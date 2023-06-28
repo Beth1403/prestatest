@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-26 23:44:11
+/* Smarty version 4.3.1, created on 2023-06-28 14:43:53
   from 'module:ps_socialfollowps_socialfollow.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_649a06ab1ac306_79834842',
+  'unifunc' => 'content_649c2b09e1c761_51057564',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,13 +18,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_649a06ab1ac306_79834842 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649c2b09e1c761_51057564 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'renderLogo' => 
   array (
     'compiled_filepath' => 'C:\\xampp\\htdocs\\prestashop\\var\\cache\\dev\\smarty\\compile\\classiclayouts_layout_full_width_tpl\\08\\39\\b4\\0839b4f781e4562a087a5e1991febe8a6e755e36_2.file.helpers.tpl.php',
     'uid' => '0839b4f781e4562a087a5e1991febe8a6e755e36',
-    'call_name' => 'smarty_template_function_renderLogo_1445177953649a06a8d3ee01_84535204',
+    'call_name' => 'smarty_template_function_renderLogo_488898513649c2b07189a87_93844186',
   ),
 ));
 ?><!-- begin C:\xampp\htdocs\prestashop/themes/classic/modules/ps_socialfollow/ps_socialfollow.tpl -->

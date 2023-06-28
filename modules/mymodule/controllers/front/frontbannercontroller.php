@@ -1,5 +1,6 @@
 <?php
 
+
 // DEUXIEME FONCTIONNALITE : visualisation des éléments suivants : 
 // 	- Le nombre de produits total actifs sur le site
 // - Le prix du panier moyen

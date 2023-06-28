@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-26 23:43:59
+/* Smarty version 4.3.1, created on 2023-06-28 14:14:12
   from 'C:\xampp\htdocs\prestashop\adminMt\themes\new-theme\template\components\layout\quick_access.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_649a069f13c689_33633754',
+  'unifunc' => 'content_649c2414ba21f0_27110585',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_649a069f13c689_33633754 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649c2414ba21f0_27110585 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="dropdown quick-accesses">
   <button class="btn btn-link btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="quick_select">

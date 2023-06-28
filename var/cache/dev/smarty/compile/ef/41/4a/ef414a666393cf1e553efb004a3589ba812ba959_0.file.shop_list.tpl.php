@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-26 23:43:59
+/* Smarty version 4.3.1, created on 2023-06-28 14:14:13
   from 'C:\xampp\htdocs\prestashop\adminMt\themes\new-theme\template\components\layout\shop_list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_649a069fa36ab5_18889169',
+  'unifunc' => 'content_649c241561a0f1_59053244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_649a069fa36ab5_18889169 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649c241561a0f1_59053244 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['is_multishop']->value)) && $_smarty_tpl->tpl_vars['is_multishop']->value && $_smarty_tpl->tpl_vars['shop_list']->value && ((isset($_smarty_tpl->tpl_vars['multishop_context']->value)) && $_smarty_tpl->tpl_vars['multishop_context']->value&Shop::CONTEXT_GROUP || $_smarty_tpl->tpl_vars['multishop_context']->value&Shop::CONTEXT_SHOP || $_smarty_tpl->tpl_vars['multishop_context']->value&Shop::CONTEXT_ALL)) {?>
   <div id="shop-list" class="shop-list dropdown ps-dropdown stores">
     <button class="btn btn-link" type="button" data-toggle="dropdown">

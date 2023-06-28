@@ -1,0 +1,10 @@
+1ère fonctionnalité : blocs de texte en mode connecté et non connecté. 
+- Beaucoup de temps perdu sur une faute de frappe, "submitt" dans "$helper->submit_action = 'submit' . $this->name;
+- Beaucoup de propositions incomplètes en ligne pour lier le CSS au tpl file. J'ai réussi en faisant un assign() et un link dans le tpl file, et un attachement au hookActionFrontControllerSetMedia. Si j'enlève l'un des trois, mon CSS est introuvable, je n'ai pas compris la bonne méthode, c'est certain.
+- Point positif : j'ai tellement fait et refait mon module que je maîtrise beaucoup mieux les étapes de création. 
+
+2ème fonctionnalité : affichage de trois informations en bannière lorsqu'on est connecté en Administrateur front
+- J'ai dû reprendre SQL et ai perdu du temps sur la syntaxe.
+- J'ai mis du temps à m'approprier les classes natives de Prestashop comme Context, Product.
+- L'affichage sur le front a été le plus long, j'ai passé énormément de temps à essayer de comprendre pourquoi ma bannière ne s'affichait pas bien que je pense avoir respecté la méthode : création de ma classe qui étend la classe ModuleFrontController, respect du nommage, greffe sur le hook displayHeader. 
+

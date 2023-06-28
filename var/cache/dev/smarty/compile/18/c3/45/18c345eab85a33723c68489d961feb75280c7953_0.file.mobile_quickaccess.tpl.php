@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-26 23:43:59
+/* Smarty version 4.3.1, created on 2023-06-28 14:14:13
   from 'C:\xampp\htdocs\prestashop\adminMt\themes\new-theme\template\components\layout\mobile_quickaccess.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_649a069f7ba955_49564250',
+  'unifunc' => 'content_649c24153528f9_88061753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_649a069f7ba955_49564250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649c24153528f9_88061753 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="component-search-quickaccess d-none">
   <p class="component-search-title"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Quick Access','d'=>'Admin.Navigation.Header'),$_smarty_tpl ) );?>
 </p>

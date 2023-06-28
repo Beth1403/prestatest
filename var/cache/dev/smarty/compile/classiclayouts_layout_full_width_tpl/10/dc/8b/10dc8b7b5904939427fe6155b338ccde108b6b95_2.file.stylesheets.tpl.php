@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-26 23:44:09
+/* Smarty version 4.3.1, created on 2023-06-28 14:43:52
   from 'C:\xampp\htdocs\prestashop\themes\classic\templates\_partials\stylesheets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_649a06a9980997_64123483',
+  'unifunc' => 'content_649c2b082f9823_77294275',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_649a06a9980997_64123483 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649c2b082f9823_77294275 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['stylesheets']->value['external'], 'stylesheet');
 $_smarty_tpl->tpl_vars['stylesheet']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['stylesheet']->value) {

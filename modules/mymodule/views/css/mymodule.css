@@ -1,10 +1,12 @@
 .mymodule-content {
-    background-color: #a41d1d;
-    padding: 10px;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(72,125,214,1) 100%);
+    padding: 30px;
     margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
 }
 
-.mymodule-text {
-    color: #e96868;
-    font-size: 14px;
-}
+

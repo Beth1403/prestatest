@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-26 23:44:11
+/* Smarty version 4.3.1, created on 2023-06-28 14:43:54
   from 'module:ps_linklistviewstemplateshooklinkblock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_649a06ab5e8e14_35652785',
+  'unifunc' => 'content_649c2b0a1e6160_31276942',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,13 +18,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_649a06ab5e8e14_35652785 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649c2b0a1e6160_31276942 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'renderLogo' => 
   array (
     'compiled_filepath' => 'C:\\xampp\\htdocs\\prestashop\\var\\cache\\dev\\smarty\\compile\\classiclayouts_layout_full_width_tpl\\08\\39\\b4\\0839b4f781e4562a087a5e1991febe8a6e755e36_2.file.helpers.tpl.php',
     'uid' => '0839b4f781e4562a087a5e1991febe8a6e755e36',
-    'call_name' => 'smarty_template_function_renderLogo_1445177953649a06a8d3ee01_84535204',
+    'call_name' => 'smarty_template_function_renderLogo_488898513649c2b07189a87_93844186',
   ),
 ));
 ?><!-- begin C:\xampp\htdocs\prestashop/themes/classic/modules/ps_linklist/views/templates/hook/linkblock.tpl --><div class="col-md-6 links">
@@ -85,6 +85,56 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
         </span>
       </div>
       <ul id="footer_sub_menu_2" class="collapse">
+                  <li>
+            <a
+                id="link-cms-page-1-2"
+                class="cms-page-link"
+                href="http://localhost/prestashop/content/1-livraison"
+                title="Nos conditions de livraison"
+                            >
+              Livraison
+            </a>
+          </li>
+                  <li>
+            <a
+                id="link-cms-page-2-2"
+                class="cms-page-link"
+                href="http://localhost/prestashop/content/2-mentions-legales"
+                title="Mentions légales"
+                            >
+              Mentions légales
+            </a>
+          </li>
+                  <li>
+            <a
+                id="link-cms-page-3-2"
+                class="cms-page-link"
+                href="http://localhost/prestashop/content/3-conditions-utilisation"
+                title="Nos conditions d&#039;utilisation"
+                            >
+              Conditions d&#039;utilisation
+            </a>
+          </li>
+                  <li>
+            <a
+                id="link-cms-page-4-2"
+                class="cms-page-link"
+                href="http://localhost/prestashop/content/4-a-propos"
+                title="En savoir plus sur notre entreprise"
+                            >
+              A propos
+            </a>
+          </li>
+                  <li>
+            <a
+                id="link-cms-page-5-2"
+                class="cms-page-link"
+                href="http://localhost/prestashop/content/5-paiement-securise"
+                title="Notre méthode de paiement sécurisé"
+                            >
+              Paiement sécurisé
+            </a>
+          </li>
                   <li>
             <a
                 id="link-static-page-contact-2"

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 
 <head>
     <meta charset="UTF-8">
@@ -8,10 +7,8 @@
    
 </head>
 
-<body>
+
 {if $page_name == 'product'}
 <button id="error-report-button">Signaler une erreur</button>
 {/if}
-<body>
 
-</html>
