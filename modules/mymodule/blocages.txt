@@ -4,7 +4,27 @@
 - Point positif : j'ai tellement fait et refait mon module que je maîtrise beaucoup mieux les étapes de création. 
 
 2ème fonctionnalité : affichage de trois informations en bannière lorsqu'on est connecté en Administrateur front
-- J'ai dû reprendre SQL et ai perdu du temps sur la syntaxe.
+- J'ai dû reprendre SQL et ai mis du temps à apprivoiser la DB de Prestashop.
 - J'ai mis du temps à m'approprier les classes natives de Prestashop comme Context, Product.
-- L'affichage sur le front a été le plus long, j'ai passé énormément de temps à essayer de comprendre pourquoi ma bannière ne s'affichait pas bien que je pense avoir respecté la méthode : création de ma classe qui étend la classe ModuleFrontController, respect du nommage, greffe sur le hook displayHeader. 
+- L'affichage sur le front a été le plus long, j'ai passé énormément de temps à essayer de comprendre pourquoi ma bannière ne s'affichait pas, bien que je pense avoir respecté la méthode de la documentation. Très déçue de rendre un projet non fonctionnel. Je pense que le problème est lié à ma non maîtrise des hooks, j'ai essayé beaucoup de solutions différentes mais au final, mon hookDisplayTop n'a jamais été présent dans la liste des hooks auxquels mon module peut se greffer alors qu'il est bien enregistré dans mon install() et déclaré dans mon frontbannercontroller.php. 
+
+3e fonctionnalité : affichage d'un bouton "signaler une erreur" qui ouvre une modale texte. 
+- Manque de temps pour développer cette partie, début de code écrit.
+
+4e fonctionnalité : sélection d'avatars. 
+- Non fait par manque de temps. Ce que j'aurais aimé essayé de faire : 
+ - Agir sur le fichier de modification de compte (en créant un nouveau fichier avatarselectioncontroller.php dans mon controllers/front) 
+ - Y ajouter une option de sélection d'avatars. 
+ - Enregistrement en DB de l'avatar sélectionné. 
+ - Agir sur le controller de la page d'accueil pour afficher cet avatar et le message de bienvenue à l'utilisateur.
+ - Enfin créer un template dans mon dossier templates/front pour afficher l'avatar et le message.
+
+Les sources utilisées pour ce projet : 
+- https://devdocs.prestashop-project.org/8/modules/creation/ pour la création de modules et le respect de l'arborescence. 
+- https://devdocs.prestashop-project.org/8/modules/concepts/hooks/ pour les hooks. 
+- pour les controllers front : - https://devdocs.prestashop-project.org/8/modules/concepts/controllers/front-controllers/ 
+                             - https://www.prestasafe.com/creer-un-module-prestashop
+                             - https://www.prestasafe.com/creer-un-module-prestashop
+- ChatGPT pour les erreurs de syntaxe et l'explication de certains éléments natifs de prestashop que je trouvais obscurs dans la doc. 
+
 
